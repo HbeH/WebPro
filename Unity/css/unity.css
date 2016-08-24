@@ -2,10 +2,11 @@
 	margin: 0;
 	padding: 0;
 	border: none;
+	font-family: "微软雅黑";
 }
 
 
-div，body,ul,p,h1,h2,h3,h4,dl,dd,form,input,textarea,select{padding: 0;margin: 0;font-family: arial;}
+div，body,ul,p,h1,h2,h3,h4,dl,dd,form,input,textarea,select{padding: 0;margin: 0;font-family: "微软雅黑";}
 li{list-style: none;}
 img{border: none;}
 a{text-decoration: none;}
@@ -39,8 +40,8 @@ a:hover{text-decoration: underline;}
 .top_logo span{margin-left: 180px;line-height: 78px;text-align: center;}
 
 .top_url{width: 100%;background: #202020;height: 46px;}
-.top_url ul{margin-left: -210px;}
-.top_url li{line-height: 46px;text-align: center;margin-right: 20px;font-size: 18px;}
+.top_url ul{margin-left: -130px;}
+.top_url li{line-height: 46px;text-align: center;margin-left: 46px;font-size: 18px;}
 #zaixian{position: absolute;top: 0;left: 62px; display: block;}
 
 .jieshao{width: 100%;height: 600px;background: #202020;}
@@ -95,7 +96,7 @@ a:hover{text-decoration: underline;}
 
 #xuanfu div p span{background: white;border-radius: 10px;padding: 12px 8px;font-size: 26px;color: #000000;margin: 12px 2px 0px 2px;text-align: justify;line-height: 40px;}
 
-#xuanfu{position:absolute;top:20%;left:50%;width:1200px;margin-left:-600px;height:144px;text-align:center;background:#ca0000;color:#fff;font-size:14px;font-weight:bold;z-index:2;}
+#xuanfu{position:absolute;top:40%;left:50%;width:1200px;margin-left:-600px;height:144px;text-align:center;background:#ca0000;color:#fff;font-size:14px;font-weight:bold;z-index:2;}
 
 /*#xuanfu{position:absolute;top:20%;left:0%;width:1200px;margin-left:-1152px;height:144px;text-align:center;background:#ca0000;color:#fff;font-size:14px;font-weight:bold;z-index:2;}*/
 

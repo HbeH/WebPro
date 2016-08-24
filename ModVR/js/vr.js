@@ -17,7 +17,7 @@ function scroll_ad(){
 	moveHeight = pos > 0 ? Math.ceil(pos) : Math.floor(pos);
 	
 	if(moveHeight != 0){
-		float_banner.style.top = float_banner.offsetTop +moveHeight + 56 +'px';
+		float_banner.style.top = float_banner.offsetTop + moveHeight  + document.documentElement.clientHeight / 13 + 'px';
 		setTimeout(scroll_ad,speed);
 	}
 }
@@ -102,7 +102,7 @@ $('#close_button').click(function  () {
 	if(pull_left)
 	{
 
-		$('#close_button').html('<button id="close_button"><img  style="width: 3%;position: absolute;top: 3.8%;right: 0%;width:46px;height:130px;" src="img/index/youjiantou.png"/></button>');
+		$('#close_button').html('<button id="close_button"><img  style="width: 3%;position: absolute;top: 3.8%;right: 0%;width:46px;height:130px;" src="images/youjiantou.png"/></button>');
 
 		pullLeft(moveHeight);
 
@@ -117,7 +117,7 @@ $('#close_button').click(function  () {
 		if( now_Left >= 489)
 		{
 			clearInterval(setStart);
-			$('#close_button').html('<img  style="width: 3%;position: absolute;top: 2%;right: 0%;" src="img/index/close.png"/>');
+			$('#close_button').html('<img  style="width: 3%;position: absolute;top: 2%;right: 0%;" src="images/close.png"/>');
 		}
 	
 		now_Left += 10;
@@ -140,17 +140,3 @@ function pullLeft(moveHeight)
 {
 	$('#xuanfu').css({'left':0,'margin-left' : -1152});
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
