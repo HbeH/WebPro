@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			
+			/*p.sans-serif{
+				font-family: arial,verdana,sans-serif;
+			}
+			p.serif{
+				font-family: times,"times new roman",serif;
+			}
+			p.monospace{
+				font-family: courier,"courier new",monospace;
+			}*/
+			/*p{text-shadow: #999999 10px 10px 1px;}*/
+			/*span.smallcaps{
+				font-variant: small-caps;
+			}*/
+			/*p.none{text-transform: none;}
+			p.capitalize{text-transform: capitalize;}
+			p.uppercase{text-transform: uppercase;}
+			p.lowercase{text-transform: lowercase;}
+			p{word-spacing: -1px;}*/
+			/*p.none:first-line{font-weight: bold;}*/
+			/*p{font-family: arial,verdana,sans-serif;}
+			div>p{border: 1px solid red;}
+			p+p+p+span{background-color: #FF0000;}*/
+			/*p{min-height: 150px;max-height: 200px;padding: 5px; border: 1px solid #000000;overflow: scroll;}*/
+			/*a:link{color: red;text-decoration: none;}
+			a:visited{color: yellow;}
+			a:link:hover{background-color: gray;}
+			a:active{color: #FF0000;}
+			body{background-image: url(img/rBACFFPcOFOiwBGVAACdMkF5UnM383.jpg);background-position: center;background-repeat: no-repeat;background-attachment: fixed;}*/
+			/*li{list-style-image: url(img/6.jpg);}*/
+			/*ul{list-style: circle inside;}
+			li{border-collapse: collapse;}*/
+			/*table{
+				width: 350px;
+				border-collapse: separate;
+				empty-cells: hide;
+			}
+			td{
+				padding: 5px;
+				border-style: solid;
+				border-width: 1px;
+				border-color: red
+			}*/
+			/*input{outline-style: solid;
+			outline-color: #FF0000;}*/
+			/*input:focus{background-color: #FF0000;}
+			p:after{content: "You need to register to read th";color: red;}*/
+			/*body{
+				counter-reset: chapter;
+				counter-reset: section;
+			}*/
+			/*h1:before{content: "Chapter" counter(chapter)":";}
+			h2:before{content: counter(chapter) "." counter(section) " ";}
+			h2{counter-increment: section;}
+			h1{
+				counter-increment: chapter;
+				counter-reset: section;
+			}*/
+			/*blockquote:before{
+				content: open-quote;
+			}
+			blockquote:after{
+				content: close-quote;
+			}*/
+			/*p.invisible{
+				visibility: hidden;
+			}*/
+			/*@import url("css/mystyle.css");
+			p{
+				font-size: 18pt !important;
+				font-weight: bold !important; 
+			}*/
+			/*div.header {
+position : fixed;
+bottom : 0px;
+left : 0px;
+width : 100%;
+padding : 20px;
+font-size : 28px;
+color : #ffffff;
+background-color : #666666;
+border-style : solid;
+border-width : 2px;
+border-color : #000000;
+}
+p {
+width : 300px;
+padding : 5px;
+color : #000000;
+background-color : #FFFFFF;
+border-style : solid;
+border-color : #000000;
+border-width : 2px;
+}
+p.one {
+margin-top : 100px;*/
+		/*body {
+color : #000000;
+background-color : #ffffff;
+font-size : 12px;
+margin : 10px;
+width : 514px;
+border : 1px solid #000000;
+}
+p {
+background-color : #FFFFFF;
+border : 2px solid #000000;
+padding : 5px;
+margin : 5px;
+width : 500px;
+}
+.pullQuote {
+float : right;
+width : 150px;
+}*/
+		body{
+			color: #000000;
+			background-color: #ffffff;
+			font-family: arial,verdana,sans-serif;
+			font-size: 12px;
+		}
+		h1{
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			color: #FFFFFF;
+			background-color: #666666;
+			padding: 10px;
+			height: 60px;
+			z-index: 2;
+		}
+		div.nav{
+			position: absolute;
+			top: 80px;
+			left: 0px;
+			width: 100px;
+			height: 300px;
+			padding: 10px;
+			background-color: #efefef;
+		}
+		div.nav:before{
+			content: "Navigation";
+			font-size: 18px;
+			font-weight: bold;
+		}
+		</style>
+	</head>
+	<body>
+		<h1>Cascading Style Sheets</h1>
+<div class="nav">
+		<a href="../index.htm">Examples index</a>
+&nbsp; 	<a href="download.html">Chapter 8 Code</a></div>
+		<h2>CSS Positioning</h2>
+		<p class="abstract">
+			<img class="floatLeft" src="images/background.gif"alt="wrox logo">This article introduces the topic of laying out
+web pages in CSS using a combination of positioning schemes.
+		</p>
+		<p>
+			CSS allows you to use three different positioning schemes to create
+			complex layouts:
+		</p>
+		<ul>
+			<li>Normal flow</li>
+			<li>Absolute positioning</li>
+			<li>Floating</li>
+		</ul>
+		<p>By using a combination of these schemes you do not need to resort to
+		using tables to lay out your pages.</p>
+		<!--<div class="header">Beginning Web Development</div>
+<p class="one">This page has to contain several paragraphs so you can see
+the effect of fixed positioning. Fixed positioning has been used on the
+header so it does not move even when the rest of the page scrolls.</p>
+<p class="one">This page has to contain several paragraphs so you can see
+the effect of fixed positioning. Fixed positioning has been used on the
+header so it does not move even when the rest of the page scrolls.</p>
+<p class="one">This page has to contain several paragraphs so you can see
+the effect of fixed positioning. Fixed positioning has been used on the
+header so it does not move even when the rest of the page scrolls.</p>
+<p class="one">This page has to contain several paragraphs so you can see
+the effect of fixed positioning. Fixed positioning has been used on the
+header so it does not move even when the rest of the page scrolls.</p>
+<p class="one">This page has to contain several paragraphs so you can see
+the effect of fixed positioning. Fixed positioning has been used on the
+header so it does not move even when the rest of the page scrolls.</p>
+<p class="one">This page has to contain several paragraphs so you can see
+the effect of fixed positioning. Fixed positioning has been used on the
+header so it does not move even when the rest of the page scrolls.</p>
+<p class="one">This page has to contain several paragraphs so you can see
+the effect of fixed positioning. Fixed positioning has been used on the
+header so it does not move even when the rest of the page scrolls.</p>-->
+		
+		<!--<h1> Introducing Web Technologies</h1>
+			<h2>Introducing HTML</h2>
+			<h2>Introducing CSS</h2>
+			<h2>Introducing XHTML</h2>
+		<h1> Structure of Documents</h1>
+			<h2>Text</h2>
+			<h2>Lists</h2>
+			<h2>Tables</h2>
+			<h2>Forms</h2>-->
+		<!--<a href="http://baidu.com">baidu</a>-->
+		<!--<ol>
+			<li>46454</li>
+		</ol>
+		<p id="introduction">Here’s paragraph one; each paragraph has different
+		attributes.
+		Here’s paragraph two; each paragraph has different attributes
+		Here’s paragraph three; each paragraph has different
+		attributes.
+		Here’s paragraph four; each paragraph has different
+		attributes.
+		Here’s paragraph five; each paragraph has different
+		attributes.
+		Here’s paragraph six; each paragraph has different
+		attributes.
+		Here’s paragraph seven; each paragraph has different
+		attributes.
+		Here’s paragraph two; each paragraph has different attributes
+		Here’s paragraph three; each paragraph has different
+		attributes.
+		Here’s paragraph four; each paragraph has different
+		attributes.
+		Here’s paragraph five; each paragraph has different
+		attributes.
+		Here’s paragraph six; each paragraph has different
+		attributes.
+		Here’s paragraph seven; each paragraph has different
+		attributes.
+		Here’s paragraph two; each paragraph has different attributes
+		Here’s paragraph three; each paragraph has different
+		attributes.
+		Here’s paragraph four; each paragraph has different
+		attributes.
+		Here’s paragraph five; each paragraph has different
+		attributes.
+		Here’s paragraph six; each paragraph has different
+		attributes.
+		Here’s paragraph seven; each paragraph has different
+		attributes.</p>-->
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

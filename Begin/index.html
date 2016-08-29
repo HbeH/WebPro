@@ -1,101 +1,75 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<title></title>
-	</head>
-	<body>
-		<form action="http://www.example.org/competition.aspx" method="post"name="frmComp">
-			<fieldset>
-				<legend><em>Contact Information</em></legend>
-				<label>First name: <input type="text" name="txtFName" size="20"> </label><br>
-				<label>Last name: <input type="text" name="txtLName" size="20"></label>
-				<br>
-				<label>E-mail: <input type="text" name="txtEmail" size="20"></label>
-				<legend><em>Contact Information</em></legend>
-				
-			</fieldset>
-			<fieldset>
-				<legend><em>Competition Question</em></legend>
-				How tall is the Eiffel Tower in Paris, France? <br>
-				<label><input type="radio" name="radAnswer" value="584">
-				584ft</label><br>
-				<label><input type="radio" name="radAnswer" value="784">
-				784ft</label><br>
-				<label><input type="radio" name="radAnswer" value="984">
-				984ft</label><br>
-				<label><input type="radio" name="radAnswer" value="1184">
-				1184ft</label><br>
-			</fieldset>
-			<fieldset>
-				<legend><em>Tiebreaker Question</em></legend>
-				<label>In 25 words or less, say why you would like to win $10,000:
-				<textarea name="txtTiebreaker" rows="10" cols="40"></textarea>
-				</label>
-			</fieldset>
-			<fieldset>
-				<legend><em>Enter competition</em></legend>
-				<input type="submit" value="Enter Competition">
-			</fieldset>
-		</form>
-		<!--<progress max="100" value="10"></progress>-->
-		<!--<form action="http://www.example.org/days.aspx" name="frmDays" method="get" name="fromImageUpload" enctype="multipart/form-data">
-			<input type="text" name="txtName" value="" size="20" maxlength="20" list="tech"/>
-			<datalist id="tech">
-				<option value="css"></option>
-				<option value="html"></option>
-				<option value=""></option>
-			</datalist>
-			<!--<input type="file" name="filleUpload" id="filleUpload" accept="image/*" value="" />
-			<p><input type="submit" name="" id="" value="Submit" /></p>-->
-		<!--</form>-->
-		<!--<form action="http://www.example.org/days.aspx" name="frmDays" method="get">
-			<select  name="selDay">
-				<optgroup>
-					<option value="Mon">Monday</option>
-					<option value="Tue">Tuesday</option>
-				</optgroup>
-				<optgroup>
-					<option value="Wed">Wednesday</option>
-					<option value="Thu">Thursday</option>
-				</optgroup>
-				<optgroup label="hbe">
-					<option value="Fri">Friday</option>
-					<option value="Sat">Saturday</option>
-					<option value="Sun">Sunday</option>
-				</optgroup>
-				
-			</select>
-			<br><br><input type="submit" value="Submit">
-		</form>
-		
-		<select name="selColor">
-<option selected="selected" value="">Select color</option>
-<option value="red">Red</option>
-<option value="green">Green</option>
-<option value="blue">Blue</option>
-</select>-->
-		<!--<audio controls >
-			<source src="胡维纳、范玮琪 - 短发.mp3"></source>
-			Your browser does not support the audio element.
-		</audio>-->
-		
-		<!--<audio  >
-		  <source src="胡维纳、范玮琪 - 短发.mp3" ></source>
-			Your browser does not support the audio element.
-		</audio>-->
-		
-	
-	
-		<!--<video width="800" height="480" controls="controls">
-			<source src="video-1.mp4" type="video/mp4"></source>
-			<source src="video-1.ogv" type="video/ogg"></source>
-			<source src="video-1.webm" type="video/webm"></source>
-			<object width="720" height="480" type="application/x-shockwave-flash" data="video-1.swf">
-				<param name="movie" value="video-1.swf" />
-				<param name="flashvars" value="autostart=true&amp;file=video-1.swf" />
-			</object>
-			当前浏览器不支持 video直接播放，点击这里下载视频： <a href="video-1.webm">下载视频</a>
-		</video>-->
-	</body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>懒人原生图片列表向左滚动结束后再向右滚动(如此反复)代码</title>
+<style>
+#lanren {width: 786px;height: 100px;margin: 0 auto;overflow: hidden;position: relative;border:1px solid #ccc;}
+#lanren2{position: absolute;left: 0;top: 0;}
+#lanren2 li {width: 190px;height:100px; text-align:center; line-height:100px;background-color: #999;margin:0 5px;display: block;float: left;list-style: none;}
+</style>
+</head>
+<body>
+
+<!--代码部分begin-->
+<div id="lanren">
+    <div id="lanren2">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+    </div>
+</div>
+
+<button id="left">left</button>
+<button id="right">riht</button>
+
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>
+<script>
+(function(){
+	var speed = 10; //滚动速度
+    var lis = 200; //单个单位的宽度
+	var i = 0;
+    var t = true;
+	var a = parseInt($('#lanren').css('width'));
+    var b = parseInt($('#lanren2 li').length * lis);
+    $('#lanren2').css('width',b)
+	var distance = b-a;
+    // console.log(distance);
+    function add(){
+        i++;
+    }
+    function reduce(){
+        i--;
+    }
+    $('#right').click(function  () {
+    	jia(-200);
+    })
+    function jia(i){
+//      if((i< distance || i<i) && t){
+//          add();
+//      }else if(i >= distance || !t){
+//          t= false;
+//          reduce();
+//      }
+//      if(i==0){
+//          t = true;
+//      }
+    $('#lanren2').css('left',i)
+    }
+//  var d = setInterval(jia, speed);
+//	$('#lanren').mouseover(function(){
+//		clearInterval(d);
+//	});
+//	$('#lanren').mouseleave(function(){
+//		d = setInterval(jia, speed);
+//	});
+}());
+</script>
+<!--代码部分end-->
+
+</body>
 </html>

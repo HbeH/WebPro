@@ -1,0 +1,25 @@
+.title_wenzi ul li a{font-size: 18px;color: #403f3f;text-decoration: none;}
+.active_a a{color: #354c9a;border-bottom: 2px solid #324999;}
+.active_a a span{color: #1344ea;}
+.anniu_job{position: absolute;right: 0;top: 0;z-index: 100;}
+
+.people_info_all {margin-top: 116px;margin-left: 10px;}
+.xiaokuai_class{margin-left: -7px;}
+#dzq{margin-top: 113px;}
+hr{margin-top: 48px;}
+@media screen and (min-width: 768px){
+	.people_info{margin-left: -100px;}
+	.gengduoxueyuan{margin-left: 80px;}
+	.people_info_all{margin-top: 160px;margin-left: 100px;}
+	.mobile_class{margin-left: 30px;}
+	.mobile_class img{width: 110%;}
+	.xiaokuai_class{margin-left: 27px;}
+	/*#youshi_class{margin-left: -17px;}*/
+	#dzq {margin-top: 130px;margin-bottom: 30px;}
+	/*hr{padding-top: 48px;padding-bottom: 48px;}*/
+	.shizi .pull-right img{margin-top: 24px;}
+	.teacher {padding-bottom: 40px;}
+}
+
+.class_img1 img,.class_img1 p{margin-left: 10px;}
+.class_img2 img,.class_img2 p{margin-left: -10px;}
